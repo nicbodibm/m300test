@@ -69,5 +69,5 @@ def contact():
     return render_template('contact.html')
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 8080))
+    port = app.config.get("PORT", 8080)  # Holen den Port aus der Konfiguration
     app.run(host='0.0.0.0', port=port, debug=True)
