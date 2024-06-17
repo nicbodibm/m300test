@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4 text-center">Kontakt</h1>
+<form action="{{ url_for('contact') }}" method="post" class="mx-auto" style="max-width: 600px;">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Nachricht:</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Senden</button>
+    </div>
+</form>
+{% endblock %}
